@@ -17,7 +17,7 @@ import com.coderscampus.com.tim_smith_spring_assignment13.domain.User;
 import com.coderscampus.com.tim_smith_spring_assignment13.service.UserService;
 
 @Controller
-public class UserController {
+public class UserController {    
 	
 	@Autowired
 	private UserService userService;
