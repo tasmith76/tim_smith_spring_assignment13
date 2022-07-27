@@ -17,13 +17,13 @@ import com.coderscampus.com.tim_smith_spring_assignment13.domain.User;
 import com.coderscampus.com.tim_smith_spring_assignment13.service.UserService;
 
 @Controller
-public class UserController {    
+public class UserController {       
 	
 	@Autowired
 	private UserService userService;
 	
 	@GetMapping("/register")
-	public String getCreateUser (ModelMap model) {
+	public String getCreateUser (ModelMap model) { 
 		model.put("user", new User());
 		return "register";
 	}
@@ -55,7 +55,7 @@ public class UserController {
 	}
 	
 	@PostMapping("/users/{userId}")
-	public String postOneUser (User user, Address address) {
+	public String postOneUser (User user, Address address) { 
 		userService.saveUser(user, address);
 		return "redirect:/users/"+user.getUserId();
 	}
